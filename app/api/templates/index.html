@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پلتفرم GoldAPI | داشبورد و مستندات</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0f172a;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+         ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        
+        .section-scroll {
+            scroll-margin-top: 80px;
+        }
+        /* برای اینکه منوی استیکی عنوان را پوشش ندهد */
+        
+        pre {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            direction: ltr;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="text-white min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950">
+
+    <!-- منوی بالا (Navbar) -->
+    <nav class="glass-card sticky top-0 z-50 border-b border-slate-700/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-2 text-xl font-bold text-white">
+                <i class="fas fa-chart-line text-cyan-400 text-2xl"></i>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">GoldAPI</span>
+            </a>
+            <div class="flex gap-2 sm:gap-6 text-sm sm:text-base">
+                <a href="#home" class="px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors">خانه</a>
+                <a href="#dashboard" class="px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors">داشبورد</a>
+                <a href="#api-docs" class="px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors">مستندات API</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 pb-12">
+
+        <!-- بخش ۱: صفحه اصلی (Home) -->
+        <section id="home" class="section-scroll text-center py-16 sm:py-24">
+            <div class="inline-block mb-6 px-4 py-1 bg-slate-800/80 border border-slate-700 rounded-full text-sm text-cyan-400 font-medium">
+                <i class="fas fa-rocket ml-1"></i> GoldAPI
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-6 leading-tight">
+                پلتفرم هوشمند رصد قیمت‌های مالی
+            </h1>
+            <p class="text-slate-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+                یک سیستم Full-Stack که نرخ ارزهای فیات و دیجیتال را به صورت لحظه‌ای اسکرپ کرده و از طریق یک API قدرتمند مبتنی بر FastAPI در اختیار توسعه‌دهندگان قرار می‌دهد.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#dashboard" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl font-bold text-white shadow-lg shadow-blue-600/30 transform hover:scale-105 transition-all">
+                    <i class="fas fa-chart-pie ml-2"></i> مشاهده داشبورد
+                </a>
+                <a href="#api-docs" class="px-8 py-4 bg-slate-800/80 border border-slate-700 rounded-xl font-bold text-slate-300 hover:bg-slate-700 transform hover:scale-105 transition-all">
+                    <i class="fas fa-book ml-2"></i> خواندن مستندات
+                </a>
+            </div>
+
+            <!-- ویژگی‌ها -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 text-right">
+                <div class="glass-card p-8 rounded-2xl hover:border-cyan-500/50 transition-colors">
+                    <div class="text-4xl text-cyan-400 mb-4"><i class="fas fa-bolt"></i></div>
+                    <h3 class="text-xl font-bold mb-3">سرعت بالا (FastAPI)</h3>
+                    <p class="text-slate-400 leading-relaxed">بک‌اند مبتنی بر پایتون و FastAPI که یکی از سریع‌ترین فریم‌ورک‌های جهان است و درخواست‌ها را به صورت غیرهمزمان (Async) پردازش می‌کند.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-colors">
+                    <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-database"></i></div>
+                    <h3 class="text-xl font-bold mb-3">ذخیره‌سازی هوشمند</h3>
+                    <p class="text-slate-400 leading-relaxed">استفاده از PostgreSQL به همراه زمان‌بند (APScheduler) برای ثبت تاریخچه قیمت‌ها و ارائه فایل اکسل به کاربران.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl hover:border-green-500/50 transition-colors">
+                    <div class="text-4xl text-green-400 mb-4"><i class="fas fa-spider"></i></div>
+                    <h3 class="text-xl font-bold mb-3">اسکرپینگ پیشرفته</h3>
+                    <p class="text-slate-400 leading-relaxed">استخراج داده‌های زنده با BeautifulSoup و مدیریت هدرها برای دور زدن سیستم‌های مسدودکننده (Anti-Bot).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش ۲: داشبورد (Dashboard) -->
+        <section id="dashboard" class="section-scroll py-16 border-t border-slate-800">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">داشبورد زنده قیمت‌ها</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">داده‌ها به صورت لحظه‌ای از منابع مالی استخراج و نمایش داده می‌شوند.</p>
+            </div>
+
+            <!-- دکمه‌های تغییر تب -->
+            <div class="flex justify-center gap-4 mb-8">
+                <button id="fiat-btn" onclick="switchTab('fiat')" class="px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-600/30 transform hover:scale-105">
+                    <i class="fas fa-money-bill-wave ml-2"></i> ارزهای معمولی
+                </button>
+                <button id="crypto-btn" onclick="switchTab('crypto')" class="px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-slate-800/80 text-slate-400 hover:bg-slate-700 border border-slate-700 transform hover:scale-105">
+                    <i class="fab fa-bitcoin ml-2"></i> ارزهای دیجیتال
+                </button>
+            </div>
+
+            <!-- باکس جستجو -->
+            <div class="mb-6 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-500">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" id="searchInput" oninput="renderData()" placeholder="جستجوی سریع... (مثلا: دلار، بیت‌کوین)" class="w-full pr-12 pl-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent placeholder-slate-500 transition-all shadow-lg">
+                </div>
+            </div>
+
+            <!-- جدول داده‌ها -->
+            <div class="glass-card rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right border-collapse min-w-[800px]">
+                        <thead>
+                            <tr class="border-b border-slate-700/80 bg-slate-800/50">
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider">نام بازار</th>
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider">قیمت لحظه‌ای</th>
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider hidden sm:table-cell">بیشترین (High)</th>
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider hidden sm:table-cell">کمترین (Low)</th>
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider hidden md:table-cell">تغییرات</th>
+                                <th class="p-5 font-bold text-slate-300 text-sm uppercase tracking-wider hidden lg:table-cell">زمان بروزرسانی</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td colspan="6" class="text-center p-12 text-slate-400">
+                                    <i class="fas fa-spinner fa-spin text-3xl mb-3 text-cyan-500"></i><br> در حال دریافت اطلاعات از سرور...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش ۳: مستندات API (API Docs) -->
+        <section id="api-docs" class="section-scroll py-16 border-t border-slate-800">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">مستندات API (Endpoints)</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">از طریق مسیرهای زیر می‌توانید به داده‌های خام JSON دسترسی پیدا کنید.</p>
+            </div>
+
+            <div class="space-y-6 text-right">
+                <!-- Endpoint 1 -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-bold rounded-md">GET</span>
+                        <code class="text-cyan-300 text-lg font-mono" dir="ltr">/prices/all</code>
+                    </div>
+                    <p class="text-slate-400 mb-4">دریافت لیست کامل قیمت ارزهای معمولی (دلار، یورو و ...)</p>
+                    <pre class="text-sm text-green-300"><code>// Sample Response
+{
+  "price_dollar_rl": {
+    "name": "دلار",
+    "price": 59250,
+    "change": "0.71 %",
+    "low": "59200",
+    "high": "59600",
+    "time": "15:50"
+  }
+}</code></pre>
+                </div>
+
+                <!-- Endpoint 2 -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-bold rounded-md">GET</span>
+                        <code class="text-cyan-300 text-lg font-mono" dir="ltr">/prices/coins</code>
+                    </div>
+                    <p class="text-slate-400 mb-4">دریافت لیست کامل قیمت ارزهای دیجیتال (بیت‌کوین، اتریوم و ...)</p>
+                </div>
+
+                <!-- Endpoint 3 -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-bold rounded-md">GET</span>
+                        <code class="text-cyan-300 text-lg font-mono" dir="ltr">/prices/coins/{coin_name}</code>
+                    </div>
+                    <p class="text-slate-400 mb-4">دریافت اطلاعات یک ارز دیجیتال خاص با نام انگلیسی یا سیمبول آن (مثال: <span class="text-cyan-400 font-mono" dir="ltr">/prices/coins/ETH</span>)</p>
+                </div>
+
+                <!-- Endpoint 4 -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm font-bold rounded-md">POST</span>
+                        <code class="text-cyan-300 text-lg font-mono" dir="ltr">/set-schedule/{hours}</code>
+                    </div>
+                    <p class="text-slate-400 mb-4">تنظیم زمان‌بندی برای ذخیره خودکار اطلاعات در دیتابیس PostgreSQL (بین ۱ تا ۶ ساعت)</p>
+                </div>
+
+                <!-- Endpoint 5 -->
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-bold rounded-md">GET</span>
+                        <code class="text-cyan-300 text-lg font-mono" dir="ltr">/prices/history/{Arz_name}</code>
+                    </div>
+                    <p class="text-slate-400 mb-4">دانلود فایل اکسل (Excel) تاریخچه قیمت‌های ثبت شده در دیتابیس</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- فوتر -->
+        <footer class="text-center text-slate-500 text-sm border-t border-slate-800 pt-8 mt-12">
+            <p>طراحی و توسعه توسط <span class="text-cyan-400 font-bold">Amir</span> | FastAPI + BeautifulSoup + Tailwind CSS</p>
+            <div class="flex justify-center gap-4 mt-3 text-lg">
+                <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
+                <a href="/docs" target="_blank" class="hover:text-cyan-400 transition-colors" title="Swagger UI"><i class="fas fa-book"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- کدهای جاوااسکریپت -->
+    <script>
+        let activeTab = 'fiat';
+        let allData = [];
+
+        async function fetchData() {
+            document.getElementById('tableBody').innerHTML = `
+                <tr>
+                    <td colspan="6" class="text-center p-12 text-slate-400">
+                        <i class="fas fa-spinner fa-spin text-3xl mb-3 text-cyan-500"></i><br>
+                        در حال دریافت اطلاعات از سرور...
+                    </td>
+                </tr>`;
+            document.getElementById('searchInput').value = '';
+
+            let endpoint = activeTab === 'fiat' ? '/prices/all' : '/prices/coins';
+
+            try {
+                const response = await fetch(endpoint);
+                if (!response.ok) throw new Error("Server error");
+                let result = await response.json();
+
+                if (activeTab === 'fiat') {
+                    allData = Object.values(result);
+                } else {
+                    allData = result;
+                }
+                renderData();
+            } catch (error) {
+                document.getElementById('tableBody').innerHTML = `
+                <tr>
+                    <td colspan="6" class="text-center p-8 text-red-400">
+                        <i class="fas fa-exclamation-triangle text-2xl mb-2"></i><br>
+                        خطا در دریافت اطلاعات. مطمئن شوید سرور FastAPI در حال اجرا است.
+                    </td>
+                </tr>`;
+            }
+        }
+
+        function renderData() {
+            let search = document.getElementById('searchInput').value.toLowerCase();
+            let filtered = allData.filter(item => {
+                let name = activeTab === 'fiat' ? item.name : (item.name_fa || item.name_en);
+                return name ? name.toLowerCase().includes(search) : false;
+            });
+
+            let html = '';
+            if (filtered.length === 0) {
+                html = `<tr><td colspan="6" class="text-center p-8 text-slate-500">
+                            <i class="fas fa-search text-2xl mb-2 block"></i>
+                            موردی یافت نشد.
+                        </td></tr>`;
+            } else {
+                filtered.forEach(item => {
+                    let isNegative = item.change && item.change.includes('-');
+                    let changeClass = isNegative ? 'bg-red-500/10 text-red-400 border border-red-500/20' : 'bg-green-500/10 text-green-400 border border-green-500/20';
+                    let changeIcon = isNegative ? '<i class="fas fa-arrow-down text-xs ml-1"></i>' : '<i class="fas fa-arrow-up text-xs ml-1"></i>';
+
+                    let nameDisplay = activeTab === 'fiat' ? item.name : item.name_fa;
+                    let symbolDisplay = (activeTab === 'crypto' && item.symbol) ?
+                        `<div class="text-xs text-slate-500 mt-1 font-mono">${item.symbol}</div>` : '';
+
+                    html += `
+                        <tr class="border-b border-slate-700/50 hover:bg-slate-700/40 transition-colors duration-200">
+                            <td class="p-4">
+                                <div class="font-bold text-white">${nameDisplay || "-"}</div>
+                                ${symbolDisplay}
+                            </td>
+                            <td class="p-4 font-mono text-cyan-400 font-bold text-lg">${item.price?.toLocaleString() || "-"}</td>
+                            <td class="p-4 font-mono text-green-400 hidden sm:table-cell">${item.high || "-"}</td>
+                            <td class="p-4 font-mono text-red-400 hidden sm:table-cell">${item.low || "-"}</td>
+                            <td class="p-4 hidden md:table-cell">
+                                <span class="px-3 py-1 rounded-lg text-sm font-medium ${changeClass}">
+                                    ${changeIcon} ${item.change || "0"}
+                                </span>
+                            </td>
+                            <td class="p-4 text-slate-400 text-sm hidden lg:table-cell">${item.time || "-"}</td>
+                        </tr>
+                    `;
+                });
+            }
+            document.getElementById('tableBody').innerHTML = html;
+        }
+
+        function switchTab(tab) {
+            activeTab = tab;
+            const fiatBtn = document.getElementById('fiat-btn');
+            const cryptoBtn = document.getElementById('crypto-btn');
+
+            if (tab === 'fiat') {
+                fiatBtn.className = "px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-600/30 transform hover:scale-105";
+                cryptoBtn.className = "px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-slate-800/80 text-slate-400 hover:bg-slate-700 border border-slate-700 transform hover:scale-105";
+            } else {
+                cryptoBtn.className = "px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-600/30 transform hover:scale-105";
+                fiatBtn.className = "px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-slate-800/80 text-slate-400 hover:bg-slate-700 border border-slate-700 transform hover:scale-105";
+            }
+            fetchData();
+        }
+
+        // لود اولیه داده‌ها
+        fetchData();
+    </script>
+</body>
+
+</html>

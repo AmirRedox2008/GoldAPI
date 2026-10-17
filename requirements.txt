@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+beautifulsoup4
+requests
+apscheduler
+openpyxl
+pydantic
